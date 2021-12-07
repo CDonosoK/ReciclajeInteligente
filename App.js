@@ -6,6 +6,7 @@
  * @flow strict-local
  */
 
+/*
 import React from 'react';
 import type {Node} from 'react';
 import {
@@ -110,3 +111,25 @@ const styles = StyleSheet.create({
 });
 
 export default App;
+*/
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import Lista from './src/components/lista/Lista';
+
+
+export default function App()  {
+  return (
+    <View style={styles.container}>
+      <Lista></Lista>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});

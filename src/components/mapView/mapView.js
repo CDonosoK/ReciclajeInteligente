@@ -1,13 +1,11 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
-import MapView from './src/components/mapView/mapView'
-import ContainerInfo from './src/components/containerInfo/containerInfoMC'
 
-export default function App() {
+export default function MapView() {
   return (
     <View style={styles.container}>
-      <ContainerInfo />
+      <Text style={styles.text}>Bienvenido a Mapas </Text>
     </View>
   )
 }

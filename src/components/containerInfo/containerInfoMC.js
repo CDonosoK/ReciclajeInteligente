@@ -12,6 +12,21 @@ export default function App() {
   return (
     <View>
       <View style={{
+        marginTop: -150,
+        //borderWidth: 1,
+        borderColor: '#d6d7da',
+        height:100,
+        marginBottom:10,
+      }}>
+        <Text style={{
+          fontSize: 40,
+          fontWeight: 'bold',
+          alignSelf: 'center',
+          alignItems: 'center',
+          marginTop:0
+        }}> RECICLAJE INTELIGENTE </Text>
+      </View>
+      <View style={{
         marginTop: -0,
         borderRadius: 5,
         borderWidth: 3,
@@ -42,13 +57,23 @@ export default function App() {
           Volver atrás
         </Text>
       </View>
-      <View>
+      <View style={{
+        borderWidth:2,
+        borderColor:'#d6d7da',
+        borderRadius:5,
+        marginTop:10,
+      }}>
         <Image style={{
           width: 350,
           height: 200,
-          marginTop: 10,
         }}
           source={require("../../assets/images/MapMacul.png")}/>
+      </View>
+      <View style={{
+        marginTop: 10,
+        marginBottom: 10,
+      }}>
+
       </View>
       <View style={{}}>
         <Text style={{}}>

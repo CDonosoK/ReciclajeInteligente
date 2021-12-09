@@ -38,7 +38,7 @@ export default function App() {
           marginTop: 10,
           textDecorationLine: 'underline'
         }}
-              onPress={() => Linking.openURL('http://google.com')}>
+              onPress={() => Linking.openURL('http://github.com/CDonosoK')}>
           Volver atrás
         </Text>
       </View>

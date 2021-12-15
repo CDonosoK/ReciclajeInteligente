@@ -2,10 +2,10 @@ import React from 'react';
 import {
   Text,
   View,
-  StyleSheet,
-  TouchableOpacity,
   Image,
   Linking ,
+  Pressable,
+  Alert
 } from 'react-native';
 
 export default function App() {
@@ -71,38 +71,145 @@ export default function App() {
       </View>
       <View style={{
         marginTop: 10,
-        marginBottom: 10,
+        marginLeft: 310,
+      }}>
+        <Text style={{
+          fontSize: 15,
+          fontWeight: 'bold',
+          color: '#001B5B',
+        }}>
+          55%
+        </Text>
+      </View>
+      <View style={{
+        borderWidth:5,
+        borderColor: '#d6d7da',
+        backgroundColor: '#d6d7da',
+        borderRadius:5,
+        marginBottom:10,
+      }}>
+        <View style={{
+        borderWidth:5,
+        borderColor: 'white',
+        backgroundColor: 'white',
+        borderRadius:5,
+        marginRight:150,
       }}>
 
-      </View>
-      <View style={{}}>
-        <Text style={{}}>
-          LINEA DE CARGA
-        </Text>
+        </View>
       </View>
 
-      <View style={{}}>
-        <Text style={{}}>
+      <View style={{
+        flexDirection: 'row',
+      }}>
+        <Image style={{
+          width: 20,
+          height: 20,
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+          source={require("../../assets/icons/positionMap.png")}/>
+
+        <Text style={{
+          flexDirection: 'column',
+          alignItems: 'center',
+          textAlign: 'center',
+          color: '#001B5B',
+          fontSize: 15,
+          fontWeight: 'bold',
+          }}>
           DIRECCIÓN
         </Text>
+
       </View>
 
-      <View style={{}}>
-        <Text style={{}}>
-          QUE SE RECICLA
+      <View style={{
+        flexDirection: 'row',
+      }}>
+        <Image style={{
+          width: 20,
+          height: 20,
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+          source={require("../../assets/icons/checkMark.png")}/>
+
+        <Text style={{
+          flexDirection: 'column',
+          alignItems: 'center',
+          textAlign: 'center',
+          color: '#00A25B',
+          fontSize: 15,
+          fontWeight: 'bold',
+          }}>
+          QUÉ SE RECICLA
         </Text>
+
       </View>
 
-      <View style={{}}>
-        <Text style={{}}>
-          QUE NO SE RECICLA
+      <View style={{
+        flexDirection: 'row',
+      }}>
+        <Image style={{
+          width: 20,
+          height: 20,
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+          source={require("../../assets/icons/crossMark.png")}/>
+
+        <Text style={{
+          flexDirection: 'column',
+          alignItems: 'center',
+          textAlign: 'center',
+          color: '#E40000',
+          fontSize: 15,
+          fontWeight: 'bold',
+          }}>
+          QUÉ NO SE RECICLA
         </Text>
+
       </View>
 
-      <View style={{}}>
-        <Text style={{}}>
-          BOTON DE DENUNCIA
-        </Text>
+      <View style={{
+        flexDirection: 'row',
+      }}>
+        <Image style={{
+          width: 20,
+          height: 20,
+          alignItems: 'center',
+          justifyContent: 'center',
+          marginTop: 5,
+        }}
+          source={require("../../assets/icons/warningMark.png")}
+        />
+        <Pressable style={{
+          alignItems: 'center',
+          justifyContent: 'center',
+          paddingHorizontal: 30,
+          borderRadius: 5,
+          marginLeft: 3,
+          borderRadius: 5,
+          borderWidth: 3,
+          borderColor: '#FFC300',
+        }}
+        onPress={
+          () => Alert.alert(
+            "Denuncia realizada",
+            "Tu denuncia ha sido enviada con éxito",
+            [
+              {text: "Aceptar"}, 
+            ],
+          )
+        }>
+          <Text style={{
+            color: '#FFC300',
+            fontSize: 15,
+          }}>
+            Denunciar
+          </Text>
+          
+        </Pressable>  
       </View>
 
     </View>

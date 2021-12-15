@@ -7,7 +7,7 @@ import ContainerInfo from './src/components/containerInfo/containerInfoMC'
 export default function App() {
   return (
     <View style={styles.container}>
-      <ContainerInfo />
+      <MapView />
     </View>
   )
 }

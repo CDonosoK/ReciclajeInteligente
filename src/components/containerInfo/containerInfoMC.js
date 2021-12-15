@@ -8,7 +8,7 @@ import {
   Alert
 } from 'react-native';
 
-export default function App() {
+export default function ContainerInfo() {
   return (
     <View>
       <View style={{

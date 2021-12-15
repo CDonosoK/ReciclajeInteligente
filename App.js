@@ -1,13 +1,13 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
-import MapView from './src/components/mapView/mapView'
 import ContainerInfo from './src/components/containerInfo/containerInfoMC'
+import LoadingMap from './src/components/mapView/loadingMap'
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <MapView />
+     <LoadingMap/>
     </View>
   )
 }

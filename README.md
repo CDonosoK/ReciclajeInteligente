@@ -8,5 +8,5 @@
 
 Recuerden hacer las ramas de la forma: git checkout -b <nombre_rama>
 
-En una terminal correr el comando: ```react-native start```
+En una terminal correr el comando: ```npm start -- --reset-cache```
 En otra terminal correr el comando: ```react-native run-android```

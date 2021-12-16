@@ -5,8 +5,6 @@ import {
  } from 'react-native'
 
 import {ProgressBar} from '@react-native-community/progress-bar-android';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import MapScreen from './mapScreen';
 
 export default function LoadingMap({navigation}) {

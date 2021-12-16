@@ -1,10 +1,7 @@
 import * as React from 'react'
 import { 
-  StyleSheet, 
   View, 
-  Text,
   Button,
-  Alert,
 } from 'react-native'
 
 import ContainerInfoMC from './src/components/containerInfo/containerInfoMC'
@@ -36,7 +33,7 @@ export default function App() {
   return (
     <NavigationContainer >
       <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Página Principal" component={HomeScreen} />
 
         <Stack.Screen name="MapScreen" component={MapScreen} />
 

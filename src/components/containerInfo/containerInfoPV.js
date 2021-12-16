@@ -3,13 +3,9 @@ import {
   Text,
   View,
   Image,
-  Linking ,
   Pressable,
   Alert
 } from 'react-native';
-
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 export default function ContainerInfoPV({navigation}) {
   return (

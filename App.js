@@ -2,6 +2,7 @@ import * as React from 'react'
 import { 
   View, 
   Button,
+  StyleSheet
 } from 'react-native'
 
 import ContainerInfoMC from './src/components/containerInfo/containerInfoMC'
@@ -11,6 +12,8 @@ import ContainerInfoPV from './src/components/containerInfo/containerInfoPV'
 
 import LoadingMap from './src/components/mapView/loadingMap'
 import MapScreen from './src/components/mapView/mapScreen'
+
+import Lista from './src/components/lista/Lista';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -52,3 +55,11 @@ export default function App() {
       
   )
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    justifyContent: 'center',
+  },
+});

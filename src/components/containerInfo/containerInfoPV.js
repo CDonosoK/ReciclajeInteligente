@@ -11,7 +11,7 @@ import {
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-export default function ContainerInfoMC({navigation}) {
+export default function ContainerInfoPV({navigation}) {
   return (
     <View style={{
       marginTop: 20,
@@ -47,7 +47,7 @@ export default function ContainerInfoMC({navigation}) {
           marginBottom: 10,
           alignSelf: 'center',
           }}>
-          MACUL
+          PROVIDENCIA
         </Text>
       </View>
       <View>
@@ -73,7 +73,7 @@ export default function ContainerInfoMC({navigation}) {
           width: 350,
           height: 200,
         }}
-          source={require("../../assets/images/MapMacul.png")}/>
+          source={require("../../assets/images/MapProvidencia.png")}/>
       </View>
       <View style={{
         marginTop: 10,
@@ -84,7 +84,7 @@ export default function ContainerInfoMC({navigation}) {
           fontWeight: 'bold',
           color: '#001B5B',
         }}>
-          80%
+          55%
         </Text>
       </View>
       <View style={{
@@ -99,7 +99,7 @@ export default function ContainerInfoMC({navigation}) {
         borderColor: 'white',
         backgroundColor: 'white',
         borderRadius:5,
-        marginRight:90,
+        marginRight:150,
       }}>
 
         </View>

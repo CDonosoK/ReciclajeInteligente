@@ -1,28 +1,53 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import * as React from 'react'
+import { 
+  StyleSheet, 
+  View, 
+  Text,
+  Button,
+  Alert,
+} from 'react-native'
 
-import ContainerInfo from './src/components/containerInfo/containerInfoMC'
+import ContainerInfoMC from './src/components/containerInfo/containerInfoMC'
+import ContainerInfoNN from './src/components/containerInfo/containerInfoNN'
+import ContainerInfoPV from './src/components/containerInfo/containerInfoPV'
+
+
 import LoadingMap from './src/components/mapView/loadingMap'
+import MapScreen from './src/components/mapView/mapScreen'
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+function HomeScreen({navigation}) {
+  return (
+    <View>
+      <Button
+          title="IR A MAPAS"
+          onPress={() => navigation.navigate(LoadingMap)
+        }
+      />
+    </View>
+  );
+}
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-     <LoadingMap/>
-    </View>
+    <NavigationContainer >
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HomeScreen} />
+
+        <Stack.Screen name="MapScreen" component={MapScreen} />
+
+        <Stack.Screen name="ContainerInfoMC" component={ContainerInfoMC} />
+        <Stack.Screen name="ContainerInfoNN" component={ContainerInfoNN} />
+        <Stack.Screen name="ContainerInfoPV" component={ContainerInfoPV} />
+
+
+        <Stack.Screen name="LoadingMap" component={LoadingMap} />
+      </Stack.Navigator>
+    </NavigationContainer>
+      
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'white',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text: {
-    color: 'rgb(59,108,212)',
-    fontSize: 42,
-    fontWeight: '100',
-    textAlign: 'center',
-  },
-})

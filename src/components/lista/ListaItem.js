@@ -29,11 +29,12 @@ class ListaItem extends Component{
   render(){
     const {isSelected} =this.state;
     return(
-      <View style={styles.container}>
+      
+      <View >
         <TouchableWithoutFeedback onPress={this.onPress}>
-          <View style={styles.titleContainer}>
-            <Text style={styles.title}>{this.props.item.title}</Text>
-            <Image source={images.expand} style={styles.image}/>
+          <View >
+            <Text >{this.props.item.title}</Text>
+            <Image source={images.expand} />
           </View>
 
         </TouchableWithoutFeedback>
@@ -45,32 +46,5 @@ class ListaItem extends Component{
 
 ListaItem.propTypes = propTypes;
 
-const styles = StyleSheet.create({
-  container: {
-    flex:1,
-    flexDirection:'column',
-    margin:10
-  },
-  titleContainer:{
-    flexDirection:'row',
-    justifyContent:'flex-end',
-  },
-  title:{
-    flex:1,
-    fontSize:22,
-    color:'green',
-  },
-  description:{
-    flex:1,
-    fontsize: 22,
-    color: 'black',
-    paddingTop:10
-  },
-  image:{
-    width:20,
-    height:20, 
-    color: 'green'
-  }
-});
 
 export {ListaItem};

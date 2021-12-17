@@ -31,19 +31,29 @@ export default class Lista extends Component {
   renderItem = ({item}) => <ListaItem item={item}/>
   render(){
     return(
-      <View style={styles.container}>
+      <View style={{
+        marginTop: 20,
+        marginLeft:10,
+        marginRight:10,
+      }}>
+      <View style={{
+          //borderWidth: 1,
+          borderColor: '#d6d7da',
+          height:100,
+          marginBottom:10,
+        }}>
+                  <Text style={{
+          fontSize: 40,
+          fontWeight: 'bold',
+          alignSelf: 'center',
+          alignItems: 'center',
+          marginTop:0
+        }}> RECICLAJE INTELIGENTE </Text>
+      <View></View>
         <FlatList data={data} renderItem={this.renderItem} 
         keyExtractor={(index, _)=> index + ''}/>
 
-      </View>
+      </View></View>
     )
   }
 }
-
-const styles = StyleSheet.create({
-  container:{
-    flex: 1,
-    backgroundColor: 'white',
-    paddingTop:50
-  }
-});

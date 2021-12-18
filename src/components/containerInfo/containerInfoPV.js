@@ -246,7 +246,7 @@ export default function ContainerInfoPV({navigation}) {
         
         <Pressable
         onPress={
-          () => navigation.navigate("ContainerInfoPV")
+          () => navigation.navigate("Login")
         }>
           <Image style={{
             width: 80,

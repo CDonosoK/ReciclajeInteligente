@@ -66,8 +66,8 @@ export default function MapScreen ({navigation}) {
         source={require("../../assets/images/Map.png")}>
         <Pressable style={{
           flexDirection: 'row',
-          marginTop: 50,
-          marginLeft: 160,
+          marginTop: 70,
+          marginLeft: 145,
         }}
         onPress={() => navigation.navigate("ContainerInfoPV")}
         >
@@ -141,7 +141,7 @@ export default function MapScreen ({navigation}) {
       }}>
         <Pressable
         onPress={
-          () => navigation.navigate("ContainerInfoPV")
+          () => navigation.navigate("MapScreen")
         }>
           <Image style={{
             width: 80,
@@ -167,7 +167,7 @@ export default function MapScreen ({navigation}) {
         
         <Pressable
         onPress={
-          () => navigation.navigate("ContainerInfoPV")
+          () => navigation.navigate("Login")
         }>
           <Image style={{
             width: 80,

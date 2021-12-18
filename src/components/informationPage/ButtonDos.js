@@ -1,7 +1,7 @@
 import React,{useState, useEffect} from 'react'
 import {View, Text, TouchableOpacity,StyleSheet} from 'react-native'
 import { useNavigation } from '@react-navigation/native';
-import Lista from '../lista/Lista.js'
+import Lista from './Lista.js'
 
 export function ButtonDos(props){
   const navigation = useNavigation();
@@ -22,7 +22,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 32,
     borderRadius: 4,
     elevation: 3,
-    backgroundColor: 'black',
+    backgroundColor: '#69995E',
+    borderColor:'#69995E', 
+    borderWidth: 2,
+    marginVertical:10,
+    marginLeft:5,
+    marginRight:5
   },
   text: {
     fontSize: 16,

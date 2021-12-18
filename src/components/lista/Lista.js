@@ -126,15 +126,15 @@ const Lista = () => {
         //borderWidth: 1,
         borderColor: '#d6d7da',
         height:100,
-        marginBottom:10,
-      }}>
-      <Text style={{
+        marginBottom:10,}}>
+        <Text style={{
           fontSize: 40,
           fontWeight: 'bold',
           alignSelf: 'center',
           alignItems: 'center',
-          marginTop:0
-      }}> RECICLAJE INTELIGENTE </Text>
+          marginTop:10,
+          color: '#69995D',
+        }}> Green Spot </Text>
       </View>
       <View>
         <View style={styles.header}>

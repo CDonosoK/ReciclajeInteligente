@@ -167,7 +167,7 @@ const HowToLista = () => {
 
 const styles = StyleSheet.create({
   header:{
-    flexDirection: 'row',
+    padding: 10,
     alignContent:'center'
   },
   titleText:{

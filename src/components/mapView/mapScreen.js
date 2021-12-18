@@ -8,10 +8,6 @@ import {
   Pressable
  } from 'react-native' 
 
-import ContainerInfoMC from '../containerInfo/containerInfoMC';
-import ContainerInfoNN from '../containerInfo/containerInfoNN';
-import ContainerInfoPV from '../containerInfo/containerInfoPV';
-
 export default function MapScreen ({navigation}) {
   return (
     <View style={{
@@ -33,7 +29,7 @@ export default function MapScreen ({navigation}) {
           marginTop:10,
           fontWeight:'bold',
           color: '#69995D',
-        }}> RECICLAJE INTELIGENTE </Text>
+        }}> Green Spot </Text>
       </View>
       <View style={{
         alignContent: 'center',
@@ -139,6 +135,9 @@ export default function MapScreen ({navigation}) {
       <View style={{
         marginTop: 20,
         flexDirection: 'row',
+        alignContent: 'center',
+        alignItems: 'center',
+        justifyContent: 'center',
 
       }}>
         <Pressable
@@ -146,9 +145,8 @@ export default function MapScreen ({navigation}) {
           () => navigation.navigate("MapScreen")
         }>
           <Image style={{
-            width: 80,
-            height: 80,
-            marginLeft: 30,
+            width: 70,
+            height: 70,
           }}
           source={require("../../assets/icons/mapScreen_SI.png")}>
           </Image>
@@ -156,11 +154,11 @@ export default function MapScreen ({navigation}) {
 
         <Pressable
         onPress={
-          () => navigation.navigate("ContainerInfoPV")
+          () => navigation.navigate("InformationPage")
         }>
           <Image style={{
-            width: 80,
-            height: 80,
+            width: 70,
+            height: 70,
             marginLeft: 30,
           }}
           source={require("../../assets/icons/infoScreen_NO.png")}>
@@ -172,8 +170,8 @@ export default function MapScreen ({navigation}) {
           () => navigation.navigate("Login")
         }>
           <Image style={{
-            width: 80,
-            height: 80,
+            width: 70,
+            height: 70,
             marginLeft: 30,
           }}
           source={require("../../assets/icons/exitScreen_NO.png")}>

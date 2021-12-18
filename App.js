@@ -9,6 +9,11 @@ import ContainerInfoMC from './src/components/containerInfo/containerInfoMC'
 import ContainerInfoNN from './src/components/containerInfo/containerInfoNN'
 import ContainerInfoPV from './src/components/containerInfo/containerInfoPV'
 
+import Lista from './src/components/lista/Lista';
+import HowToLista from './src/components/lista/HowToLista';
+import  ButtonUno from './src/components/informationPage/ButtonUno';
+import  ButtonDos from './src/components/informationPage/ButtonDos';
+import InformationPage from './src/components/informationPage/InformationPage';
 
 import LoadingMap from './src/components/mapView/loadingMap'
 import MapScreen from './src/components/mapView/mapScreen'
@@ -39,6 +44,12 @@ export default function App() {
         <Stack.Screen name="Confirmation" component={Confirmation} />
 
         <Stack.Screen name="LoadingMap" component={LoadingMap} />
+
+        <Stack.Screen name="InformationPage" component={InformationPage}/>
+        <Stack.Screen name="ButtonUno" component={ButtonUno}/>
+        <Stack.Screen name="ButtonDos" component={ButtonDos}/>
+        <Stack.Screen name="Lista" component={Lista}/>
+        <Stack.Screen name="HowToLista" component={HowToLista}/>
 
       </Stack.Navigator>
     </NavigationContainer>

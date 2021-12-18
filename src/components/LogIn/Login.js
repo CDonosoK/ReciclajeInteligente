@@ -23,7 +23,7 @@ function Login() {
           }}
         />
       </View>
-        <Text style={styles.LoginText}>Reciclaje Inteligente</Text>
+        <Text style={styles.LoginText}>Green Spot</Text>
       </View>
       <View style={styles.text2}>
         <Text>Don't have an account? </Text>

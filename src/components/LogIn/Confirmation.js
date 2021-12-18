@@ -23,7 +23,7 @@ function Confirmation() {
           }}
         />
       </View>
-        <Text style={styles.LoginText}>Reciclaje Inteligente</Text>
+        <Text style={styles.LoginText}>Green Spot</Text>
       </View>
       <View style={styles.text2}>
         <Text>Comprueba si recibiste un correo electrónico, hemos mandado tu contraseña al email</Text>

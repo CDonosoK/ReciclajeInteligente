@@ -25,7 +25,7 @@ function Signup() {
           }}
         />
       </View>
-      <Text style={styles.LoginText}>Reciclaje Inteligente </Text>
+      <Text style={styles.LoginText}>Green Spot </Text>
       <View style={styles.text2}>
         <Text>Already have account? </Text>
         <TouchableOpacity onPress={() => navigation.navigate("Login")} ><Text style={styles.signupText}> Login </Text></TouchableOpacity>

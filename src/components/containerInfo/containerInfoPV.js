@@ -14,6 +14,9 @@ export default function ContainerInfoPV({navigation}) {
       marginLeft:10,
       marginRight:10,
     }} >
+      <Pressable
+      onPress={() => navigation.navigate('MapScreen')}
+      >
       <View style={{
         //borderWidth: 1,
         borderColor: '#d6d7da',
@@ -30,6 +33,7 @@ export default function ContainerInfoPV({navigation}) {
           color: '#69995D',
         }}> RECICLAJE INTELIGENTE </Text>
       </View>
+      </Pressable>
       <View style={{
         marginTop: -0,
         borderRadius: 5,

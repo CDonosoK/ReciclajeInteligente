@@ -25,7 +25,9 @@ export default function ContainerInfoPV({navigation}) {
           fontWeight: 'bold',
           alignSelf: 'center',
           alignItems: 'center',
-          marginTop:0
+          marginTop:10,
+          fontWeight:'bold',
+          color: '#69995D',
         }}> RECICLAJE INTELIGENTE </Text>
       </View>
       <View style={{

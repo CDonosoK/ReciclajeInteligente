@@ -61,7 +61,7 @@ export default function MapScreen ({navigation}) {
       }}>
       <ImageBackground style={{
           width: 346,
-          height: 340,
+          height: 400,
         }}
         source={require("../../assets/images/Map.png")}>
         <Pressable style={{
@@ -133,6 +133,51 @@ export default function MapScreen ({navigation}) {
           
 
         </ImageBackground>
+      </View>
+      <View style={{
+        marginTop: 20,
+        flexDirection: 'row',
+
+      }}>
+        <Pressable
+        onPress={
+          () => navigation.navigate("ContainerInfoPV")
+        }>
+          <Image style={{
+            width: 80,
+            height: 80,
+            marginLeft: 30,
+          }}
+          source={require("../../assets/icons/mapScreen_SI.png")}>
+          </Image>
+        </Pressable>
+
+        <Pressable
+        onPress={
+          () => navigation.navigate("ContainerInfoPV")
+        }>
+          <Image style={{
+            width: 80,
+            height: 80,
+            marginLeft: 30,
+          }}
+          source={require("../../assets/icons/infoScreen_NO.png")}>
+          </Image>
+        </Pressable>
+        
+        <Pressable
+        onPress={
+          () => navigation.navigate("ContainerInfoPV")
+        }>
+          <Image style={{
+            width: 80,
+            height: 80,
+            marginLeft: 30,
+          }}
+          source={require("../../assets/icons/exitScreen_NO.png")}>
+          </Image>
+        </Pressable>
+
       </View>
       
     </View>

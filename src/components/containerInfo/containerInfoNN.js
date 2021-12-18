@@ -119,7 +119,7 @@ export default function ContainerInfoNN({navigation}) {
           fontSize: 15,
           fontWeight: 'bold',
           }}>
-          DIRECCIÓN
+          Av. Suecia 403
         </Text>
 
       </View>
@@ -143,7 +143,7 @@ export default function ContainerInfoNN({navigation}) {
           fontSize: 15,
           fontWeight: 'bold',
           }}>
-          QUÉ SE RECICLA
+            Latas, Tetrapack y Papel
         </Text>
 
       </View>
@@ -167,7 +167,7 @@ export default function ContainerInfoNN({navigation}) {
           fontSize: 15,
           fontWeight: 'bold',
           }}>
-          QUÉ NO SE RECICLA
+          Vidrio y Cartón
         </Text>
 
       </View>
@@ -211,6 +211,51 @@ export default function ContainerInfoNN({navigation}) {
           </Text>
           
         </Pressable>  
+      </View>
+      <View style={{
+        marginTop: 20,
+        flexDirection: 'row',
+
+      }}>
+        <Pressable
+        onPress={
+          () => navigation.navigate("MapScreen")
+        }>
+          <Image style={{
+            width: 80,
+            height: 80,
+            marginLeft: 30,
+          }}
+          source={require("../../assets/icons/mapScreen_NO.png")}>
+          </Image>
+        </Pressable>
+
+        <Pressable
+        onPress={
+          () => navigation.navigate("ContainerInfoPV")
+        }>
+          <Image style={{
+            width: 80,
+            height: 80,
+            marginLeft: 30,
+          }}
+          source={require("../../assets/icons/infoScreen_NO.png")}>
+          </Image>
+        </Pressable>
+        
+        <Pressable
+        onPress={
+          () => navigation.navigate("ContainerInfoPV")
+        }>
+          <Image style={{
+            width: 80,
+            height: 80,
+            marginLeft: 30,
+          }}
+          source={require("../../assets/icons/exitScreen_NO.png")}>
+          </Image>
+        </Pressable>
+
       </View>
 
     </View>

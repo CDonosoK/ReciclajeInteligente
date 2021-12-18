@@ -37,7 +37,7 @@ export default function App() {
       screenOptions={{
         headerShown: false
       }}>
-        <Stack.Screen name="Página Principal" component={HomeScreen} />
+        <Stack.Screen name="Home" component={HomeScreen} />
 
         <Stack.Screen name="MapScreen" component={MapScreen} />
 

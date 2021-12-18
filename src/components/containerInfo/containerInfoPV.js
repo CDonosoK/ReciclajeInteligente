@@ -120,7 +120,7 @@ export default function ContainerInfoPV({navigation}) {
           fontSize: 15,
           fontWeight: 'bold',
           }}>
-          DIRECCIÓN
+          Av Luis Thayer Ojeda 1561
         </Text>
 
       </View>
@@ -144,7 +144,7 @@ export default function ContainerInfoPV({navigation}) {
           fontSize: 15,
           fontWeight: 'bold',
           }}>
-          QUÉ SE RECICLA
+          Cartón y Papel
         </Text>
 
       </View>
@@ -168,7 +168,7 @@ export default function ContainerInfoPV({navigation}) {
           fontSize: 15,
           fontWeight: 'bold',
           }}>
-          QUÉ NO SE RECICLA
+          Latas, Vidrios y Plumavit
         </Text>
 
       </View>
@@ -212,6 +212,51 @@ export default function ContainerInfoPV({navigation}) {
           </Text>
           
         </Pressable>  
+      </View>
+      <View style={{
+        marginTop: 20,
+        flexDirection: 'row',
+
+      }}>
+        <Pressable
+        onPress={
+          () => navigation.navigate("MapScreen")
+        }>
+          <Image style={{
+            width: 80,
+            height: 80,
+            marginLeft: 30,
+          }}
+          source={require("../../assets/icons/mapScreen_NO.png")}>
+          </Image>
+        </Pressable>
+
+        <Pressable
+        onPress={
+          () => navigation.navigate("ContainerInfoPV")
+        }>
+          <Image style={{
+            width: 80,
+            height: 80,
+            marginLeft: 30,
+          }}
+          source={require("../../assets/icons/infoScreen_NO.png")}>
+          </Image>
+        </Pressable>
+        
+        <Pressable
+        onPress={
+          () => navigation.navigate("ContainerInfoPV")
+        }>
+          <Image style={{
+            width: 80,
+            height: 80,
+            marginLeft: 30,
+          }}
+          source={require("../../assets/icons/exitScreen_NO.png")}>
+          </Image>
+        </Pressable>
+
       </View>
 
     </View>

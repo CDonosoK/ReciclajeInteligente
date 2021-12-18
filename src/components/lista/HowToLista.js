@@ -1,65 +1,62 @@
-import React, {useState, useEffect} from 'react';
-import {SafeAreaView, StyleSheet, View, Text, ScrollView, TouchableOpacity, LayoutAnimation, Platform, UIManager, Button} from 'react-native';
+import React, {useState, useEffect} from 'react'
+import {SafeAreaView, StyleSheet, View, Text, ScrollView, TouchableOpacity, LayoutAnimation, Platform, UIManager, Button} from 'react-native'
 import { useNavigation } from '@react-navigation/native';
-
 const CONTENT = [
   {
     isExpanded: false,
     category_name: 'Residuos Orgánicos',
     subcategory:[
-      {id: 1, val: '• Cáscaras'},
-      {id: 2, val: '• Restos de frutas y verduras'},
-      {id: 3, val: '• Frutas y verduras muy maduras'},
-      {id: 4, val: '• Cáscaras de huevos'},
-      {id: 5, val: '• Pasto, restos de podas, hojas verdes y secas'},
-      {id: 6, val: '• Restos de té, café, mate y bolsas de té'}
+      {id: 1, val: '1. Separar los residuos orgánicos en un contenedor distinto en la casa'},
+      {id: 2, val: '2. Una vez separados se debe incorporar a la compostera, vermicompostera o entregarlo el día de la recolección municipal'},
     ]
   },
   {
     isExpanded: false,
     category_name: 'Papel',
     subcategory:[
-      {id: 1, val: '• Papel blanco de impresora'},
-      {id: 2, val: '• Hojas de cuaderno'},
-      {id: 3, val: '• Boletas, facturas, guías, sobres'},
-      {id: 4, val: '• Libros sin tapa, diarios, revistas'},
+      {id: 1, val: '1. Saca elementos como clips, corchetes, cinta adhesiva y espiral'},
+      {id: 2, val: '2. Deposita el papel en el contenedor correspondiente'},
     ]
   },
   {
     isExpanded: false,
     category_name: 'Vidrios',
     subcategory:[
-      {id: 1, val: '• Botellas'},
-      {id: 2, val: '• Frascos y vasos de vidrio transparente o de color'},
+      {id: 1, val: '1. Quita etiquetas y tapas'},
+      {id: 2, val: '2. Enguaja con poca agua y escurre'},
+      {id: 2, val: '3. Deposita el vidrio en el contenedor correspondiente'},
     ]
   },
   {
     isExpanded: false,
     category_name: 'Botellas plásticas',
     subcategory:[
-      {id: 1, val: '• Botellas desechables para bebidas'},
-      {id: 2, val: '• Contenedores de fruta (envase clamshell) o artículos fabricados con PET(N°1)'},
-      {id: 3, val: '• Envases de detergente, champús, bidones'},
-      {id: 4, val: '• Tapas de botellas y otros articulos de polipropileno(N°5)'},
-      {id: 5, val: '• Bolsas fabricadas con polietileno(N°2 y 4)'},
+      {id: 1, val: '1. Sacar la tapa'},
+      {id: 2, val: '2. Saca la etiqueta'},
+      {id: 3, val: '3. Quita los restos líquidos'},
+      {id: 4, val: '4. Enguaja con un poco de agua y escurre'},
+      {id: 5, val: '5. Después de esto: aplasta y deposita en el contenedor correspondiente'},
     ]
   },
   {
     isExpanded: false,
     category_name: 'Latas de metal',
     subcategory:[
-      {id: 1, val: '• Latas de bebida (de aluminio)'},
-      {id: 2, val: '• Tarros de conserva (hojalata)'},
+      {id: 1, val: '1. Quita los restos de alimentos'},
+      {id: 2, val: '2. Quita la etiqueta'},
+      {id: 3, val: '3. Enguaja con un poco de agua y escurre'},
+      {id: 4, val: '4. Aplasta las latas de alumnio'},
+      {id: 5, val: '5. Deposita en el contenedor correspondiente'},
     ]
   },
   {
     isExpanded: false,
     category_name: 'Cartón',
     subcategory:[
-      {id: 1, val: '• Cartón corrugado'},
-      {id: 2, val: '• Cajas de embalaje'},
-      {id: 3, val: '• Cartulinas, papel kraft'},
-      {id: 4, val: '•Cilindros de papel absorbente e higiénico'},
+      {id: 1, val: '1. Quitar elementos como cintas adhesivas, corchetes metálicos, entre otros'},
+      {id: 2, val: '2. Si está manchado con restos de alimentos, límpialo'},
+      {id: 3, val: '3. Reduce su volumen aplanándolo'},
+      {id: 4, val: '4. Deposita el cartón en el contenedor correspondiente'},
     ]
   },
 
@@ -76,32 +73,33 @@ const ExpandableComponent = ({item, onClickFunction}) =>{
     }
   }, [item.isExpanded])
   return(
-
-  <View>
-    <TouchableOpacity style={styles.item}
-          onPress={onClickFunction} >
-    <Text style={styles.itemText}>{item.category_name}</Text>
-    </TouchableOpacity>
-    <View style={{
+    <View>
+      <TouchableOpacity style={styles.item}
+      onPress={onClickFunction} >
+      <Text style={styles.itemText}>{item.category_name}</Text>
+      </TouchableOpacity>
+      <View style={{
         height: layoutHeight,
-        overflow: 'hidden',}}>
+        overflow: 'hidden',
+      }}>
         {item.subcategory.map((item, key)=>(
-        <TouchableOpacity 
+            <TouchableOpacity 
               key={key}
               style={styles.content}>
-          <Text style={styles.text}>{item.val}</Text>
-          <View style={styles.separator}/>
-        </TouchableOpacity>
+              <Text style={styles.text}>{item.val}</Text>
+              <View style={styles.separator}/>
+            </TouchableOpacity>
         ))} 
       </View>
     </View>
   )
 }
 
-const Lista = () => {
+const HowToLista = () => {
   const [multiSelect, setmultiSelect] =useState(false);
   const [listaDataSource, setlistDataSource]=useState(CONTENT);
   const navigation = useNavigation();
+
   if(Platform.OS == 'android'){
     UIManager.setLayoutAnimationEnabledExperimental(true);
   }
@@ -138,7 +136,7 @@ const Lista = () => {
       </View>
       <View>
         <View style={styles.header}>
-        <Text style={styles.titleText}> ¿QUÉ SE PUEDE RECICLAR? </Text>
+        <Text style={styles.titleText}> ¿CÓMO SE RECICLA? </Text>
         <TouchableOpacity onPress={()=>setmultiSelect(!multiSelect)}>
         </TouchableOpacity>
         </View>
@@ -152,16 +150,16 @@ const Lista = () => {
                 }}/>
           ))}
         </ScrollView>
-      </View>
-      <View>
-        <Text style={{
-          color: 'blue',
-          fontSize: 15,
-          marginLeft: 15,
-          marginRight: 15,
-          marginTop: 10,
-          textDecorationLine: 'underline'}}
-          onPress={() => navigation.navigate("InformationPage")}>Volver atrás </Text>
+        <View>
+          <Text style={{
+            color: 'blue',
+            fontSize: 15,
+            marginLeft: 15,
+            marginRight: 15,
+            marginTop: 10,
+            textDecorationLine: 'underline'}}
+            onPress={() => navigation.navigate("InformationPage")}>Volver atrás </Text>
+        </View>
       </View>
     </SafeAreaView>
   )
@@ -169,7 +167,7 @@ const Lista = () => {
 
 const styles = StyleSheet.create({
   header:{
-    padding: 10,
+    flexDirection: 'row',
     alignContent:'center'
   },
   titleText:{
@@ -201,7 +199,7 @@ const styles = StyleSheet.create({
     height: 0.5,
     backgroundColor:'#c8c8c8',
     width:'100%'
-  }, 
+  }
 })
 
-export default Lista;
+export default HowToLista;

@@ -14,6 +14,10 @@ import LoadingMap from './src/components/mapView/loadingMap'
 import MapScreen from './src/components/mapView/mapScreen'
 
 import Lista from './src/components/lista/Lista';
+import HowToLista from './src/components/lista/HowToLista';
+import  ButtonUno from './src/components/informationPage/ButtonUno';
+import  ButtonDos from './src/components/informationPage/ButtonDos';
+import InformationPage from './src/components/informationPage/InformationPage';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -50,6 +54,12 @@ export default function App() {
 
 
         <Stack.Screen name="LoadingMap" component={LoadingMap} />
+
+        <Stack.Screen name="InformationPage" component={InformationPage}/>
+        <Stack.Screen name="ButtonUno" component={ButtonUno}/>
+        <Stack.Screen name="ButtonUno" component={ButtonDos}/>
+        <Stack.Screen name="Lista" component={Lista}/>
+        <Stack.Screen name="HowToLista" component={HowToLista}/>
       </Stack.Navigator>
     </NavigationContainer>
       

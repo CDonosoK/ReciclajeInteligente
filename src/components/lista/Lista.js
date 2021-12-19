@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {SafeAreaView, StyleSheet, View, Text, ScrollView, TouchableOpacity, LayoutAnimation, Platform, UIManager, Button} from 'react-native';
+import {SafeAreaView, StyleSheet, View, Text, ScrollView, TouchableOpacity, LayoutAnimation, Platform, UIManager, Pressable} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 const CONTENT = [
@@ -122,20 +122,26 @@ const Lista = () => {
   }
   return(
     <SafeAreaView>
+      <Pressable 
+      onPress={() => navigation.navigate('MapScreen')}
+      >
       <View style={{
         //borderWidth: 1,
         borderColor: '#d6d7da',
         height:100,
-        marginBottom:10,}}>
+        marginBottom:10,
+      }}>
         <Text style={{
           fontSize: 40,
           fontWeight: 'bold',
           alignSelf: 'center',
           alignItems: 'center',
           marginTop:10,
+          fontWeight:'bold',
           color: '#69995D',
         }}> Green Spot </Text>
       </View>
+      </Pressable>
       <View>
         <View style={styles.header}>
         <Text style={styles.titleText}> ¿QUÉ SE PUEDE RECICLAR? </Text>

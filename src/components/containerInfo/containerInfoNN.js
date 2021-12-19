@@ -78,13 +78,14 @@ export default function ContainerInfoNN({navigation}) {
       </View>
       <View style={{
         marginTop: 10,
-        marginLeft: 310,
+        marginLeft: 240,
       }}>
         <Text style={{
           fontSize: 15,
           fontWeight: 'bold',
           color: '#001B5B',
         }}>
+          Capacidad al
           20%
         </Text>
       </View>
@@ -182,8 +183,8 @@ export default function ContainerInfoNN({navigation}) {
         flexDirection: 'row',
       }}>
         <Image style={{
-          width: 20,
-          height: 20,
+          width: 22,
+          height: 22,
           alignItems: 'center',
           justifyContent: 'center',
           marginTop: 5,
@@ -199,6 +200,7 @@ export default function ContainerInfoNN({navigation}) {
           borderRadius: 5,
           borderWidth: 3,
           borderColor: '#FFC300',
+          backgroundColor: '#FFC300',
         }}
         onPress={
           () => Alert.alert(
@@ -210,7 +212,8 @@ export default function ContainerInfoNN({navigation}) {
           )
         }>
           <Text style={{
-            color: '#FFC300',
+            color: 'black',
+            fontWeight: 'bold',
             fontSize: 15,
           }}>
             Denunciar

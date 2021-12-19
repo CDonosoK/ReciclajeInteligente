@@ -16,20 +16,26 @@ export function InformationPage()  {
       marginLeft:10,
       marginRight:10,
       }}>
+      <Pressable 
+      onPress={() => navigation.navigate('MapScreen')}
+      >
       <View style={{
         //borderWidth: 1,
         borderColor: '#d6d7da',
         height:100,
-        marginBottom:10,}}>
+        marginBottom:10,
+      }}>
         <Text style={{
           fontSize: 40,
           fontWeight: 'bold',
           alignSelf: 'center',
           alignItems: 'center',
           marginTop:10,
+          fontWeight:'bold',
           color: '#69995D',
         }}> Green Spot </Text>
       </View>
+      </Pressable>
       <Text style={styles.text}>Para que los residuos puedan reciclarse, deben estar limpios, secos y libres de material orgánico al momento de depositarse en puntos de reciclaje. </Text>
       <Text style={styles.text}>Sigue estos 3 simples pasos y ya contribuyes al reciclaje:</Text>
       <View style={{

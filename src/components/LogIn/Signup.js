@@ -27,8 +27,8 @@ function Signup() {
       </View>
       <Text style={styles.LoginText}>Green Spot </Text>
       <View style={styles.text2}>
-        <Text>Already have account? </Text>
-        <TouchableOpacity onPress={() => navigation.navigate("Login")} ><Text style={styles.signupText}> Login </Text></TouchableOpacity>
+        <Text>Ya tienes una cuenta? </Text>
+        <TouchableOpacity onPress={() => navigation.navigate("Login")} ><Text style={styles.signupText}> Ingresa aquí </Text></TouchableOpacity>
       </View>
       
       </View>
@@ -83,7 +83,7 @@ function Signup() {
               />
             }
             variant="outline"
-            placeholder="Fullname"
+            placeholder="Nombre"
             _light={{
               placeholderTextColor: "#69995D",
             }}
@@ -114,7 +114,7 @@ function Signup() {
               />
             }
             variant="outline"
-            placeholder="Enterprise"
+            placeholder="Apellidos"
             _light={{
               placeholderTextColor: "#69995D",
             }}
@@ -146,7 +146,7 @@ function Signup() {
               />
             }
             variant="outline"
-            placeholder="Address"
+            placeholder="Dirección"
             _light={{
               placeholderTextColor: "#69995D",
             }}
@@ -177,7 +177,7 @@ function Signup() {
               />
             }
             variant="outline"
-            placeholder="Full Name"
+            placeholder="Nombre de Usuario"
             _light={{
               placeholderTextColor: "#69995D",
             }}
@@ -209,7 +209,7 @@ function Signup() {
             }
             variant="outline"
             secureTextEntry={true}
-            placeholder="Password"
+            placeholder="Contraseña"
             _light={{
               placeholderTextColor: "#69995D",
             }}
@@ -240,7 +240,7 @@ function Signup() {
             }
             variant="outline"
             secureTextEntry={true}
-            placeholder="Confirm Password"
+            placeholder="Repita la Contraseña"
             _light={{
               placeholderTextColor: "#69995D",
             }}
@@ -254,7 +254,7 @@ function Signup() {
       {/* Button */}
       <View style={styles.buttonStyle}>
         <Button style={styles.buttonDesign} onPress={() => navigation.navigate("LoadingMap")} >
-            REGISTER NOW
+            REGISTRARME
         </Button>
       </View>
 

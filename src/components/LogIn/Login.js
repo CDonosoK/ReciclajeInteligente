@@ -26,8 +26,8 @@ function Login() {
         <Text style={styles.LoginText}>Green Spot</Text>
       </View>
       <View style={styles.text2}>
-        <Text>Don't have an account? </Text>
-        <TouchableOpacity onPress={() => navigation.navigate("Signup")} ><Text style={styles.buttonText}> Sign up</Text></TouchableOpacity>
+        <Text>Todavía no tienes una cuenta? </Text>
+        <TouchableOpacity onPress={() => navigation.navigate("Signup")} ><Text style={styles.buttonText}> Regístrate</Text></TouchableOpacity>
       </View>
 
       {/* Username Input Field */}
@@ -49,7 +49,7 @@ function Login() {
               />
             }
             variant="outline"
-            placeholder="Username"
+            placeholder="Nombre de Usuario"
             _light={{
               placeholderTextColor: "#69995D",
             }}
@@ -81,7 +81,7 @@ function Login() {
             }
             variant="outline"
             secureTextEntry={true}
-            placeholder="Password"
+            placeholder="Contraseña"
             _light={{
               placeholderTextColor: "#69995D",
             }}
@@ -97,7 +97,7 @@ function Login() {
       {/* Button */}
       <View style={styles.buttonStyle}>
         <Button style={styles.buttonDesign} onPress={() => navigation.navigate("LoadingMap")} >
-            LOGIN
+            INGRESAR
         </Button>
       </View>
 

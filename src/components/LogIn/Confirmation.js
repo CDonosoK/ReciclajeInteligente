@@ -32,7 +32,7 @@ function Confirmation() {
       {/* Button */}
       <View style={styles.buttonStyle}>
         <Button style={styles.buttonDesign} onPress={() => navigation.navigate("Login")} >
-            Back to Login
+            INICIAR SESIÓN
         </Button>
       </View>
 

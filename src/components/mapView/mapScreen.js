@@ -42,10 +42,23 @@ export default function MapScreen ({navigation}) {
           width: 300,
           height: 40,
         }}
-        placeholder="🔍Buscar contenedor"
+        placeholder="🔍"
         placeholderTextColor="gray"
         borderColor="gray"
         />
+      </View>
+      <View style={{
+        alignContent: 'center',
+        alignItems: 'center',
+        justifyContent: 'center',
+
+      }}>
+        <Text style={{
+          fontWeight: 'bold',
+        }}>
+          Selecciona el contenedor de tú interés
+        </Text>
+
       </View>
       <View style={{
         marginTop: 10,

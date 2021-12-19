@@ -27,8 +27,8 @@ function Password() {
         <Text style={styles.LoginText}>Green Spot </Text>
       </View>
       <View style={styles.text2}>
-        <Text>Don't have an account? </Text>
-        <TouchableOpacity onPress={() => navigation.navigate("Signup")} ><Text style={styles.buttonText}> Sign up</Text></TouchableOpacity>
+        <Text>Todavía no tienes una cuenta? </Text>
+        <TouchableOpacity onPress={() => navigation.navigate("Signup")} ><Text style={styles.buttonText}> Regístrate</Text></TouchableOpacity>
       </View>
 
       {/* Password Input Field */}
